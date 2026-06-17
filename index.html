@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIA | Fine Art Jewelry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(245, 240, 235, 0.4), rgba(245, 240, 235, 0.4)), url('https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?auto=format&fit=crop&q=80&w=1400') center/cover;
+            padding-top: 80px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .gallery-item {
+            position: relative;
+        }
+
+        .gallery-item:nth-child(even) {
+            margin-top: 6rem;
+        }
+
+        .img-wrapper {
+            padding: 1rem;
+            border: var(--border-gold);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-info h3 {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-info p {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.6;
+        }
+
+        .testimonials {
+            background: var(--white);
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 2rem;
+            line-height: 1.4;
+            color: var(--accent-gold);
+        }
+
+        .attribution {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: flex-start;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 1rem 0;
+            background: transparent;
+            border: none;
+            border-bottom: var(--border-light);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition-slow);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-bottom-color: var(--accent-gold);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid, .contact-layout { grid-template-columns: 1fr; }
+            .gallery-item:nth-child(even) { margin-top: 0; }
+            .contact-layout { gap: 4rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#hero" class="nav-logo">AURELIA</a>
+                <ul class="nav-links">
+                    <li><a href="#gallery">Collection</a></li>
+                    <li><a href="#testimonials">Experience</a></li>
+                    <li><a href="#contact">Inquire</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container fade-in">
+                <h1>Timeless artifacts for the modern muse.</h1>
+                <p style="letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.9rem;">Fine Jewelry | Bespoke Artistry</p>
+                <a href="#gallery" class="btn-luxury" style="margin-top: 3rem;">View The Collection</a>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <div class="fade-in">
+                    <p style="text-align: center; letter-spacing: 0.4em; text-transform: uppercase; font-size: 0.7rem; margin-bottom: 1rem; color: var(--accent-gold);">Curated Selection</p>
+                    <h2>The Collection</h2>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item fade-in">
+                        <div class="img-wrapper">
+                            <div style="height: 500px; background: #E8E2DD; display: flex; align-items: center; justify-content: center;">[Ring Photo]</div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Lumina Gold Band</h3>
+                            <p>18k Solid Gold | Diamond Accent</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item fade-in">
+                        <div class="img-wrapper">
+                            <div style="height: 600px; background: #DED6CE; display: flex; align-items: center; justify-content: center;">[Necklace Photo]</div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Celestial Pendant</h3>
+                            <p>Rose Gold | Moonstone Setting</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item fade-in">
+                        <div class="img-wrapper">
+                            <div style="height: 600px; background: #E5DDD5; display: flex; align-items: center; justify-content: center;">[Earring Photo]</div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Ethereal Droplets</h3>
+                            <p>White Gold | Pear-cut Sapphires</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item fade-in">
+                        <div class="img-wrapper">
+                            <div style="height: 500px; background: #D6CEC6; display: flex; align-items: center; justify-content: center;">[Bracelet Photo]</div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Infinite Bangle</h3>
+                            <p>Gold Vermeil | Minimalist Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section testimonials">
+            <div class="container fade-in">
+                <div class="quote">
+                    "Aurelia doesn't just create jewelry; they create stories that stay with you forever. Every piece feels like a personal heirloom from the moment you touch it."
+                </div>
+                <div class="attribution">— Eleanor V. Sterling</div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="fade-in">
+                        <p style="letter-spacing: 0.4em; text-transform: uppercase; font-size: 0.7rem; margin-bottom: 1rem; color: var(--accent-gold);">Private Consultations</p>
+                        <h2 style="text-align: left; margin-bottom: 2rem;">Inquire</h2>
+                        <p style="margin-bottom: 2.5rem; opacity: 0.7;">We invite you to reach out for bespoke commissions or to inquire about our current collection. Our specialists are at your service.</p>
+                        
+                        <div style="margin-bottom: 3rem;">
+                            <h4 style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1rem;">Atelier Address</h4>
+                            <p style="opacity: 0.6; font-size: 0.9rem;">72 Place Vendôme<br>75001 Paris, France</p>
+                        </div>
+
+                        <div>
+                            <h4 style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1rem;">Direct Contact</h4>
+                            <p style="opacity: 0.6; font-size: 0.9rem;">concierge@aurelia-fineart.com<br>+33 1 42 61 56 90</p>
+                        </div>
+                    </div>
+
+                    <div class="fade-in">
+                        <form id="jewelryContactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required placeholder="Julianne Moore">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" required placeholder="julianne@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="interest">Interest</label>
+                                <input type="text" id="interest" placeholder="Bespoke Wedding Band">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" rows="4" required placeholder="Tell us about the piece you envision..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-luxury" style="width: 100%; cursor: pointer;">Send Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">AURELIA</div>
+            <div class="footer-socials">
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+                <a href="#">Journal</a>
+                <a href="#">Stores</a>
+            </div>
+            <p style="opacity: 0.4; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;">&copy; 2026 Aurelia Fine Art Jewelry. All rights reserved.</p>
+            <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 0.5rem;">Note: This is a demo website created for example purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
